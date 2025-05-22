@@ -8,6 +8,18 @@ body {
 }
 header{
   font-size: 40px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  justify-content: space-between;
+}
+header nav {
+  display: flex;
+  gap: 10px;
+}
+header h1 {
+  margin: 0;
+  font-size: 52px;
 }
 
 /* Encabezado y pie de página */
@@ -33,15 +45,16 @@ nav {
 nav button {
   padding: 8px 16px;
   border: none;
-  background-color: #ffb74d; /* Naranja suave */
+  background-color: #03cc7f77; /* Naranja suave */
   color: white;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 25px;
   transition: background-color 0.3s; /* Transición suave al pasar el mouse */
 }
 
 nav button:hover {
-  background-color: #ffa726; /* Cambio de color al pasar el mouse */
+  background-color: #075a37; /* Cambio de color al pasar el mouse */
 }
 
 /* Secciones ocultas por defecto */
@@ -73,8 +86,8 @@ section {
 }
 
 .gato-card img {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%; /* Imagen circular */
   object-fit: cover; /* Recorte bien ajustado */
 }
@@ -89,6 +102,7 @@ section {
   flex-wrap: wrap;
   margin: 100px;
   padding: 20px;
+  border-radius: 10px;
 }
 
 /* Cuadros informativos */
@@ -101,6 +115,7 @@ section {
   flex-wrap: wrap;
   margin: 100px;
   padding: 20px;
+  border-radius: 10px;
 }
 
 /* Botón de acción */
@@ -140,5 +155,14 @@ footer a:hover {
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
-  padding: 1rem;
+  padding: 20px;
+}
+#login {
+  align-items: center;
+}
+#login {
+  width: 300px; /* Ajusta según el tamaño deseado */
+  margin: 0 auto; /* Centra horizontalmente */
+  padding: 20px;
+  text-align: center;
 }
