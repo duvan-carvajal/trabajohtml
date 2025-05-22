@@ -1,0 +1,144 @@
+/* Estilo general del cuerpo */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente más amigable */
+  margin: 0;
+  background-color: #fafffe; /* Fondo celeste claro */
+  color: #333; /* Color de texto oscuro para buena lectura */
+  font-size: 20px;
+}
+header{
+  font-size: 40px;
+}
+
+/* Encabezado y pie de página */
+header, footer {
+  background-color: #e7f6ff; /* Fondo blanco limpio */
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra suave */
+  padding: 2px;
+}
+
+#imagensiña{
+  width: 200px;
+}
+/* Navegación con botones */
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+nav button {
+  padding: 8px 16px;
+  border: none;
+  background-color: #ffb74d; /* Naranja suave */
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Transición suave al pasar el mouse */
+}
+
+nav button:hover {
+  background-color: #ffa726; /* Cambio de color al pasar el mouse */
+}
+
+/* Secciones ocultas por defecto */
+section {
+  display: none;
+  padding: 20px;
+}
+
+/* Sección visible */
+.active {
+  display: block;
+}
+
+/* Tarjetas individuales de gatos */
+.gato-card {
+  display: inline-block;
+  background: #fff8e1; /* Fondo amarillo pastel */
+  padding: 15px;
+  margin: 15px;
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Sombra envolvente */
+  text-align: center;
+  width: 180px;
+  transition: transform 0.2s; /* Animación al pasar el mouse */
+}
+
+.gato-card:hover {
+  transform: translateY(-5px); /* Efecto flotante */
+}
+
+.gato-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; /* Imagen circular */
+  object-fit: cover; /* Recorte bien ajustado */
+}
+
+/* Cuadros informativos */
+.cuadro-adopcion {
+  background: #4db6ac; /* Verde agua */
+  color: white;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 100px;
+  padding: 20px;
+}
+
+/* Cuadros informativos */
+.cuadro-cuidados {
+  background: #4db6ac; /* Verde agua */
+  color: white;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 100px;
+  padding: 20px;
+}
+
+/* Botón de acción */
+.boton {
+  background: #81c784; /* Verde suave */
+  border: none;
+  padding: 8px 20px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+/* Enlaces del pie de página */
+footer a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #039be5; /* Azul amigable */
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #0288d1; /* Azul más intenso */
+}
+
+/* Cuadro para consejos o cuidados */
+.cuadro-cuidado {
+  margin: 10px 0;
+  padding: 15px;
+  background: #90a4ae; /* Gris azulado */
+  color: white;
+  border-radius: 8px;
+}
+
+.cuadros-gatos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}

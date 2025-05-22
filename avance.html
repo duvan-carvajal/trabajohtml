@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gaturrillos</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header>
+    <h1>Gaturrillos</h1>
+    <input type="text" placeholder="search">
+    <nav>
+      <button onclick="mostrar('inicio')">Inicio</button>
+      <button onclick="mostrar('adopcion')">Gatos en adopción</button>
+      <button onclick="mostrar('cuidados')">Cuidados del gato</button>
+      <button onclick="mostrar('login')">Iniciar sesión</button>
+      <button onclick="mostrar('testimonios')">Testimonios</button>
+    </nav>
+  </header>
+
+  <section id="inicio" class="active">
+    <h2>Dales una oportunidad, adopta un amigo peludo</h2>
+    <button class="boton" onclick="mostrar('adopcion')">Ver gatos disponibles</button>
+    <div>
+      <section class="cuadros-gatos">
+      <div class="gato-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEr4Q56JC76BpylN4FF3jck1ldfgMk0BQYUg&s">
+        <button class="boton" onclick="mostrar('detalle')">Adoptar</button>
+      </div>
+      <div class="gato-card">
+        <img src="https://elfarodeceuta.es/wp-content/uploads/2019/04/gato-cara.jpeg">
+        <button class="boton" onclick="mostrar('detalle2')">Adoptar</button>
+      </div>
+      <div class="gato-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV4JmcMkCKHq-Va-bYduGa1XsSfkc0RLdr0w&s">
+        <button class="boton" onclick="mostrar('detalle3')">Adoptar</button>
+      </div>
+    </div>
+    
+    <div class="cuadro-adopcion">
+      <h4>¿Cómo adoptar?</h4>
+      <ol>
+        <li>Llena el formulario</li>
+        <li>Conoce al gato</li>
+        <li>Firma un acuerdo de adopción</li>
+      </ol>
+    </div>
+    <div class="cuadro-cuidados">
+      <h4>Cuidados</h4>
+      <ul>
+        <li>Alimentación</li>
+        <li>Vacunación</li>
+        <li>Higiene</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="adopcion">
+    <h2>Gatos en adopción</h2>
+  </section>
+
+  <section id="detalle">
+    <h2>Gaturrillos</h2>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEr4Q56JC76BpylN4FF3jck1ldfgMk0BQYUg&s" id="imagensiña">
+    <p><strong>Tomás</strong><br>2 años<br>Le gusta bastante cazar, viene con su juguete que simula un raton a baterias el cual persigue hasta cansarse</p>
+    <button class="boton">Quiero adoptar</button>
+    <h4>Historia</h4>
+    <p>Fue rescatado de una zona industrial donde vivía entre maquinaria y mucho ruido...</p>
+  </section>
+  <section id="detalle2">
+    <h2>Gaturrillos</h2>
+    <img src="https://elfarodeceuta.es/wp-content/uploads/2019/04/gato-cara.jpeg" id="imagensiña">
+    <p><strong>Leyla</strong><br>4 meses<br> Tranquila, Buena compañia, Le gusta mucho el atun</p>
+    <button class="boton">Quiero adoptar</button>
+    <h4>Historia</h4>
+    <p>Fue rescatada de una zona con bastante maltrato animal en la que era gata callejera y fue atendida en una veterinaria, tiene todas sus vacunas al dia</p>
+  </section>
+  <section id="detalle3">
+    <h2>Gaturrillos</h2>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV4JmcMkCKHq-Va-bYduGa1XsSfkc0RLdr0w&s" id="imagensiña">
+    <p><strong>Tomás</strong><br>9 meses<br> Está chiquito pero es bastante activo, Cuenta con todas sus vacunas, le encanta el queso y reacciona de manera positiva al cariño</p>
+    <button class="boton">Quiero adoptar</button>
+    <h4>Historia</h4>
+    <p>Fue abandonado por una familia dentro de las sedes de corabastos y fue encontrado por un miembro del equipo</p>
+  </section>
+
+  <section id="cuidados">
+    <h2>Cuidados del Gato</h2>
+    <div class="cuadro-cuidado">
+      <h4>Alimentación</h4>
+      <p>Los gatos necesitan una dieta rica en proteínas. Proporciónales alimento seco y húmedo balanceado, y asegúrate de que siempre tengan agua fresca.</p>
+    </div>
+    <div class="cuadro-cuidado">
+      <h4>Vacunas</h4>
+      <p>Vacuna a tu gato según el calendario veterinario. Las vacunas ayudan a prevenir enfermedades como la panleucopenia, calicivirus y rabia.</p>
+    </div>
+    <div class="cuadro-cuidado">
+      <h4>Higiene</h4>
+      <p>Mantén limpia su caja de arena, cepilla su pelaje regularmente y revísalo para detectar pulgas o garrapatas. Un ambiente limpio previene enfermedades.</p>
+    </div>
+  </section>
+
+  <section id="login">
+    <h2>Iniciar sesión</h2>
+    <label>Correo electrónico<br><input type="email"></label><br>
+    <label>Contraseña<br><input type="password"></label><br><br>
+    <button class="boton" style="background: lightgreen;">Entrar</button><br>
+    <a href="#">¿Olvidaste tu contraseña?</a>
+  </section>
+
+  <section id="testimonios">
+    <h2>Testimonios</h2>
+    <p>"Adoptar a Tomás cambió mi vida..." — Laura G.</p>
+    <div class="cuadro-testimonios">
+      <img src="https://preview.redd.it/4p89tqfhmt5c1.jpg?auto=webp&s=a927cb2aa0ad744148a4e06336652c74be95341d"  style="width: 200px;">
+      <p>"Adoptar a Tomás fue una de las mejores decisiones que he tomado..." — Valeria M.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>Síguenos
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+    </p>
+    <p><span>📍Ubicación de refugio</span></p>
+  </footer>
+
+  <script>
+    function mostrar(seccion) {
+      document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+      document.getElementById(seccion).classList.add('active');
+    }
+  </script>
+</body>
+</html>
