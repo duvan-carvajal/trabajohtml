@@ -6,15 +6,23 @@
   <title>Gaturrillos</title>
   <link rel="stylesheet" href="estilos.css">
 </head>
+
 <body>
+  <div class="fondo-fijo"></div>
+
   <header>
     <h1>Gaturrillos</h1>
+
+    <nav id="Busqueda">
     <input type="text" placeholder="search">
+    </nav>
+
     <nav>
       <button onclick="mostrar('inicio')">Inicio</button>
       <button onclick="mostrar('adopcion')">Gatos en adopción</button>
       <button onclick="mostrar('cuidados')">Cuidados del gato</button>
       <button onclick="mostrar('login')">Iniciar sesión</button>
+      <button onclick="mostrar('account')">Crear cuenta</button>
       <button onclick="mostrar('testimonios')">Testimonios</button>
     </nav>
   </header>
@@ -24,20 +32,23 @@
     <button class="boton" onclick="mostrar('adopcion')">Ver gatos disponibles</button>
     <div>
       <section class="cuadros-gatos">
+
       <div class="gato-card">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEr4Q56JC76BpylN4FF3jck1ldfgMk0BQYUg&s">
         <button class="boton" onclick="mostrar('detalle')">Adoptar</button>
       </div>
+      
       <div class="gato-card">
         <img src="https://elfarodeceuta.es/wp-content/uploads/2019/04/gato-cara.jpeg">
         <button class="boton" onclick="mostrar('detalle2')">Adoptar</button>
       </div>
+
       <div class="gato-card">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV4JmcMkCKHq-Va-bYduGa1XsSfkc0RLdr0w&s">
         <button class="boton" onclick="mostrar('detalle3')">Adoptar</button>
       </div>
     </div>
-    
+
     <div class="cuadro-adopcion">
       <h3>¿Cómo adoptar?</h3>
       <p>Nos alegra saber que estas pensando en adoptar, todos nuestros peludos están a la espera de una familia y son entregados en óptimas condiciones de salud y belleza a adoptantes responsables y amorosos. En esta página conocerás nuestro proceso de adopción y requisitos.</p>
@@ -47,6 +58,7 @@
         <li>Firma el acuerdo de adopcion y se parte del cambio de vida de un felino!</li>
       </ol>
     </div>
+
     <div class="cuadro-cuidados">
       <h3>Cuidados</h3>
       <p>Mantener la salud, vida comoda e integridad de nuestros felinos no es tarea facil, pero si eres nuevo en esto no te preocupes! Aqui abajo tendras una serie de cuidados basicos para tu peludito!</p>
@@ -56,7 +68,10 @@
         <li>Recuerda mantener tu peludito limpio y aseado, de esta manera evitarás enfermedades o alergias</li>
       </ul>
     </div>
+
   </section>
+
+<div class="Contenido">
 
   <section id="adopcion">
     <h2>Gatos en adopción</h2>
@@ -86,6 +101,7 @@
     <h4>Historia</h4>
     <p>Fue rescatado de una zona industrial donde vivía entre maquinaria y mucho ruido...</p>
   </section>
+
   <section id="detalle2">
     <h2>Gaturrillos</h2>
     <img src="https://elfarodeceuta.es/wp-content/uploads/2019/04/gato-cara.jpeg" id="imagensiña">
@@ -94,6 +110,7 @@
     <h4>Historia</h4>
     <p>Fue rescatada de una zona con bastante maltrato animal en la que era gata callejera y fue atendida en una veterinaria, tiene todas sus vacunas al dia</p>
   </section>
+
   <section id="detalle3">
     <h2>Gaturrillos</h2>
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV4JmcMkCKHq-Va-bYduGa1XsSfkc0RLdr0w&s" id="imagensiña">
@@ -109,32 +126,52 @@
       <h4>Alimentación</h4>
       <p>Los gatos necesitan una dieta rica en proteínas. Proporciónales alimento seco y húmedo balanceado, y asegúrate de que siempre tengan agua fresca.</p>
     </div>
+
     <div class="cuadro-cuidado">
       <h4>Vacunas</h4>
       <p>Vacuna a tu gato según el calendario veterinario. Las vacunas ayudan a prevenir enfermedades como la panleucopenia, calicivirus y rabia.</p>
     </div>
+
     <div class="cuadro-cuidado">
       <h4>Higiene</h4>
       <p>Mantén limpia su caja de arena, cepilla su pelaje regularmente y revísalo para detectar pulgas o garrapatas. Un ambiente limpio previene enfermedades.</p>
     </div>
+
   </section>
 
-  <section id="login">
-    <h2>Iniciar sesión</h2>
-    <label>Correo electrónico<br><input type="email"></label><br>
-    <label>Contraseña<br><input type="password"></label><br><br>
-    <button class="boton" style="background: lightgreen;">Entrar</button><br>
-    <a href="#">¿Olvidaste tu contraseña?</a>
-  </section>
+<section id="login">
+  <h2>Iniciar sesión</h2>
+  <label>Correo electrónico
+    <input id="login-email" type="email" placeholder="ejemplo@correo.com">
+  </label>
+  <label>Contraseña
+    <input id="login-password" type="password" placeholder="••••••••">
+  </label>
+  <button onclick="iniciarSesion()" class="boton">Entrar</button>
+  <a href="#">¿Olvidaste tu contraseña?</a>
+</section>
 
-  <section id="testimonios">
-    <h2>Testimonios</h2>
-    <p>"Adoptar a Tomás cambió mi vida..." — Laura G.</p>
-    <div class="cuadro-testimonios">
-      <img src="https://preview.redd.it/4p89tqfhmt5c1.jpg?auto=webp&s=a927cb2aa0ad744148a4e06336652c74be95341d"  style="width: 200px;">
-      <p>"Adoptar a Tomás fue una de las mejores decisiones que he tomado..." — Valeria M.</p>
-    </div>
-  </section>
+<section id="account">
+  <h2>Crear cuenta</h2>
+  <label>Correo electrónico
+    <input id="register-email" type="email" placeholder="ejemplo@correo.com">
+  </label>
+  <label>Contraseña
+    <input id="register-password" type="password" placeholder="••••••••">
+  </label>
+  <button onclick="crearCuenta()" class="boton">Entrar</button>
+  <a href="#">¿Olvidaste tu contraseña?</a>
+</section>
+
+<section id="testimonios">
+  <h2>Testimonios</h2>
+  <p class="testimonio-text">"Adoptar a Tomás cambió mi vida..." — Laura G.</p>
+
+  <div class="cuadro-testimonios">
+    <img src="https://preview.redd.it/4p89tqfhmt5c1.jpg?auto=webp&s=a927cb2aa0ad744148a4e06336652c74be95341d" alt="Foto de Tomás">
+    <p class="testimonio-text">"Adoptar a Tomás fue una de las mejores decisiones que he tomado..." — Valeria M.</p>
+  </div>
+</section>
 
   <footer>
     <p>Síguenos
@@ -144,12 +181,12 @@
     <p><span>📍Ubicación de refugio</span></p>
   </footer>
   <script src="./script.js"></script>
-  <script>
-    
+  <script>    
     function mostrar(seccion) {
       document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
       document.getElementById(seccion).classList.add('active');
     }
   </script>
+  
 </body>
 </html>

@@ -1,39 +1,46 @@
-/* Estilo general del cuerpo */
+/* === Estilo General === */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente más amigable */
-  margin: 0;
-  background-color: #fafffe; /* Fondo celeste claro */
-  color: #333; /* Color de texto oscuro para buena lectura */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 20px;
-}
-header{
-  font-size: 40px;
+  margin: 0;
+  padding-bottom: 100px;
+  background-color:  #FAF9F6;
+  color: #2D3142;
   display: flex;
-  align-items: center;
-  padding: 10px;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* === Encabezado === */
+header {
+  display: flex;
   justify-content: space-between;
+  align-items: center;
+  background-color: #E07A5F;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 20px;
 }
-header nav {
-  display: flex;
-  gap: 10px;
-}
+
 header h1 {
   margin: 0;
   font-size: 52px;
 }
 
-/* Encabezado y pie de página */
-header, footer {
-  background-color: #e7f6ff; /* Fondo blanco limpio */
-  text-align: center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra suave */
-  padding: 2px;
+header nav {
+  display: flex;
+  gap: 10px;
 }
 
-#imagensiña{
-  width: 200px;
+/* === Footer === */
+footer {
+  width: 100%;
+  background-color: #E07A5F;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
-/* Navegación con botones */
+
+/* === Navegación === */
 nav {
   display: flex;
   justify-content: center;
@@ -45,107 +52,90 @@ nav {
 nav button {
   padding: 8px 16px;
   border: none;
-  background-color: #03cc7f77; /* Naranja suave */
-  color: white;
+  background-color: #264653;
+  color: #F4EBC1;
   border-radius: 5px;
   cursor: pointer;
   font-size: 25px;
-  transition: background-color 0.3s; /* Transición suave al pasar el mouse */
+  transition: background-color 0.3s;
 }
 
 nav button:hover {
-  background-color: #075a37; /* Cambio de color al pasar el mouse */
+  background-color: #F2CC8F;
+  color: #264653;
 }
 
-/* Secciones ocultas por defecto */
-section {
-  display: none;
-  padding: 20px;
-}
-
-/* Sección visible */
-.active {
-  display: block;
-}
-
-/* Tarjetas individuales de gatos */
-.gato-card {
-  display: inline-block;
-  background: #fff8e1; /* Fondo amarillo pastel */
-  padding: 15px;
-  margin: 15px;
-  border-radius: 10px; /* Bordes redondeados */
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Sombra envolvente */
-  text-align: center;
-  width: 180px;
-  transition: transform 0.2s; /* Animación al pasar el mouse */
-}
-
-.gato-card:hover {
-  transform: translateY(-5px); /* Efecto flotante */
-}
-
-.gato-card img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%; /* Imagen circular */
-  object-fit: cover; /* Recorte bien ajustado */
-}
-
-/* Cuadros informativos */
-.cuadro-adopcion {
-  background: #4db6ac; /* Verde agua */
-  color: white;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin: 100px;
-  padding: 20px;
-  border-radius: 10px;
-}
-
-/* Cuadros informativos */
-.cuadro-cuidados {
-  background: #4db6ac; /* Verde agua */
-  color: white;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin: 100px;
-  padding: 20px;
-  border-radius: 10px;
-}
-
-/* Botón de acción */
+/* === Botones Personalizados === */
 .boton {
-  background: #81c784; /* Verde suave */
-  border: none;
-  padding: 8px 20px;
+  background: #2A9D8F;
   color: white;
+  padding: 8px 20px;
+  border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background 0.3s;
 }
 
-/* Enlaces del pie de página */
-footer a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: #039be5; /* Azul amigable */
-  transition: color 0.3s;
+.boton:hover {
+  background: #E76F51;
 }
 
-footer a:hover {
-  color: #0288d1; /* Azul más intenso */
+/* === Secciones y Contenido === */
+.contenido {
+  flex: 1;
 }
 
-/* Cuadro para consejos o cuidados */
+section {
+  display: none;
+  padding: 20px;
+}
+
+section.active {
+  display: block;
+}
+
+/* === Tarjetas de Gato === */
+.gato-card {
+  display: inline-block;
+  background: #B9AEDC;
+  padding: 15px;
+  margin: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 180px;
+  transition: transform 0.2s;
+}
+
+.gato-card:hover {
+  transform: translateY(-5px);
+}
+
+.gato-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* === Cuadros de Información === */
+.cuadro-adopcion,
+.cuadro-cuidados {
+  background: #264653;
+  color: #F4EBC1;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 100px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
 .cuadro-cuidado {
   margin: 10px 0;
   padding: 15px;
-  background: #90a4ae; /* Gris azulado */
+  background: #6A7FDB;
   color: white;
   border-radius: 8px;
 }
@@ -157,12 +147,503 @@ footer a:hover {
   gap: 1rem;
   padding: 20px;
 }
+
+/* === Login === */
 #login {
-  align-items: center;
-}
-#login {
-  width: 300px; /* Ajusta según el tamaño deseado */
-  margin: 0 auto; /* Centra horizontalmente */
+  width: 300px;
+  margin: 0 auto;
   padding: 20px;
   text-align: center;
+  align-items: center;
+}
+#account {
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  align-items: center;
+}
+/* === Fondo Fijo Transparente === */
+.fondo-fijo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 66.7%;
+  background-image: url(https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2022/12/22/16717291176497.jpg);
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+/* === Imagen decorativa === */
+#imagensiña {
+  width: 200px;
+}
+
+#testimonios {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 30px;
+  background-color: white; /* Fondo blanco */
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  font-family: 'Arial', sans-serif;
+}
+
+#testimonios h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.testimonio-text {
+  font-style: italic;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.cuadro-testimonios {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #EDEDF7;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.cuadro-testimonios img {
+  width: 200px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+#detalle {
+  max-width: 700px;
+  margin: 40px auto;
+  background: #FFFDFC; /* blanco roto */
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #3D3D4E;
+}
+
+#detalle h2 {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 30px;
+  letter-spacing: 1.1px;
+}
+
+.detalle-contenido {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+#imagensiña {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+  flex-shrink: 0;
+}
+
+.detalle-texto {
+  flex: 1;
+  min-width: 300px;
+}
+
+.detalle-texto p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin: 12px 0;
+}
+
+.detalle-texto .edad {
+  color: #91a1b5;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.detalle-texto h4 {
+  margin-top: 30px;
+  font-size: 1.4rem;
+  color: #264653;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+
+.boton {
+  margin: 20px 0;
+  background: #2A9D8F;
+  color: white;
+  padding: 12px 28px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.boton:hover {
+  background: #E76F51;
+}
+
+#detalle2 {
+  max-width: 700px;
+  margin: 40px auto;
+  background: #FFFDFC; /* blanco roto */
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #3D3D4E;
+}
+
+#detalle2 h2 {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 30px;
+  letter-spacing: 1.1px;
+}
+
+.detalle-contenido {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+#imagensiña {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+  flex-shrink: 0;
+}
+
+.detalle-texto {
+  flex: 1;
+  min-width: 300px;
+}
+
+.detalle-texto p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin: 12px 0;
+}
+
+.detalle-texto .edad {
+  color: #91a1b5;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.detalle-texto h4 {
+  margin-top: 30px;
+  font-size: 1.4rem;
+  color: #264653;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+
+.boton {
+  margin: 20px 0;
+  background: #2A9D8F;
+  color: white;
+  padding: 12px 28px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.boton:hover {
+  background: #E76F51;
+}
+
+#detalle3 {
+  max-width: 700px;
+  margin: 40px auto;
+  background: #FFFDFC; /* blanco roto */
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #3D3D4E;
+}
+
+#detalle3 h2 {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 30px;
+  letter-spacing: 1.1px;
+}
+
+.detalle-contenido {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+#imagensiña {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+  flex-shrink: 0;
+}
+
+.detalle-texto {
+  flex: 1;
+  min-width: 300px;
+}
+
+.detalle-texto p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin: 12px 0;
+}
+
+.detalle-texto .edad {
+  color: #91a1b5;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.detalle-texto h4 {
+  margin-top: 30px;
+  font-size: 1.4rem;
+  color: #264653;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+
+.boton {
+  margin: 20px 0;
+  background: #2A9D8F;
+  color: white;
+  padding: 12px 28px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.boton:hover {
+  background: #E76F51;
+}
+
+#Busqueda {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding: 10px;
+}
+
+#Busqueda input[type="text"] {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px 20px;
+  border: 2px solid #ccc;
+  border-radius: 50px;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+#Busqueda input[type="text"]:focus {
+  border-color: #2A9D8F;
+  background-color: #ffffff;
+  box-shadow: 0 6px 15px rgba(42, 157, 143, 0.2);
+}
+
+#login {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#login h2 {
+  margin-bottom: 25px;
+  font-size: 28px;
+  color: #333;
+}
+
+#login label {
+  display: block;
+  margin-bottom: 20px;
+  text-align: left;
+  font-weight: bold;
+  color: #444;
+}
+
+#login input[type="email"],
+#login input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  color: #AAA;
+  border: 1px solid #CCC;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+#login input:focus {
+  border-color: #2A9D8F;
+  outline: none;
+}
+
+#login .boton {
+  width: 100%;
+  background-color: #81c784;
+  font-size: 18px;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+#login .boton:hover {
+  background-color: #66bb6a;
+}
+
+#login a {
+  display: block;
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #2A9D8F;
+  text-decoration: none;
+}
+
+#login a:hover {
+  text-decoration: underline;
+}
+
+#account {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#account h2 {
+  margin-bottom: 25px;
+  font-size: 28px;
+  color: #333;
+}
+
+#account label {
+  display: block;
+  margin-bottom: 20px;
+  text-align: left;
+  font-weight: bold;
+  color: #444;
+}
+
+#account input[type="email"],
+#account input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  color: #AAA;
+  border: 1px solid #CCC;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+#account input:focus {
+  border-color: #2A9D8F;
+  outline: none;
+}
+#account .boton {
+  width: 100%;
+  background-color: #81c784;
+  font-size: 18px;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+#account .boton:hover {
+  background-color: #66bb6a;
+}
+
+#account a {
+  display: block;
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #2A9D8F;
+  text-decoration: none;
+}
+
+#account a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  nav {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  nav a {
+    display: block;
+    width: 90%;
+    margin: 6px auto;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-top: 10px;
+    position: static;
+  }
+
+  .logo-circulo {
+    display: none; /* O ajusta su posición */
+  }
+
+  .detalle-contenido {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cuadro-adopcion {
+    margin: 20px auto;
+  }
 }
