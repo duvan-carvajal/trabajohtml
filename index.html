@@ -97,7 +97,7 @@
     <h2>Gaturrillos</h2>
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEr4Q56JC76BpylN4FF3jck1ldfgMk0BQYUg&s" id="imagensiña">
     <p><strong>Tomás</strong><br>2 años<br>Le gusta bastante cazar, viene con su juguete que simula un raton a baterias el cual persigue hasta cansarse</p>
-    <button class="boton">Quiero adoptar</button>
+    <button class="boton" onclick="adoptar('Tomás')">Quiero adoptar</button>
     <h4>Historia</h4>
     <p>Fue rescatado de una zona industrial donde vivía entre maquinaria y mucho ruido...</p>
   </section>
@@ -106,7 +106,7 @@
     <h2>Gaturrillos</h2>
     <img src="https://elfarodeceuta.es/wp-content/uploads/2019/04/gato-cara.jpeg" id="imagensiña">
     <p><strong>Leyla</strong><br>4 meses<br> Tranquila, Buena compañia, Le gusta mucho el atun</p>
-    <button class="boton">Quiero adoptar</button>
+    <button class="boton" onclick="adoptar('Leyla')">Quiero adoptar</button>
     <h4>Historia</h4>
     <p>Fue rescatada de una zona con bastante maltrato animal en la que era gata callejera y fue atendida en una veterinaria, tiene todas sus vacunas al dia</p>
   </section>
@@ -115,7 +115,7 @@
     <h2>Gaturrillos</h2>
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV4JmcMkCKHq-Va-bYduGa1XsSfkc0RLdr0w&s" id="imagensiña">
     <p><strong>Carlos</strong><br>9 meses<br> Está chiquito pero es bastante activo, Cuenta con todas sus vacunas, le encanta el queso y reacciona de manera positiva al cariño</p>
-    <button class="boton">Quiero adoptar</button>
+    <button class="boton" onclick="adoptar('Carlos')">Quiero adoptar</button>
     <h4>Historia</h4>
     <p>Fue abandonado por una familia dentro de las sedes de corabastos y fue encontrado por un miembro del equipo</p>
   </section>
@@ -171,6 +171,31 @@
     <img src="https://preview.redd.it/4p89tqfhmt5c1.jpg?auto=webp&s=a927cb2aa0ad744148a4e06336652c74be95341d" alt="Foto de Tomás">
     <p class="testimonio-text">"Adoptar a Tomás fue una de las mejores decisiones que he tomado..." — Valeria M.</p>
   </div>
+</section>
+<section id="formulario-adopcion" style="display: none;">
+  <h2>Formulario de Adopción</h2>
+  <p id="nombre-gato-seleccionado"><strong>Gato:</strong> </p>
+
+  <form>
+    <label>Nombre completo
+      <input type="text" name="nombre" required>
+    </label><br><br>
+
+    <label>Correo electrónico
+      <input type="email" name="correo" required>
+    </label><br><br>
+
+    <label>Dirección
+      <input type="text" name="direccion" required>
+    </label><br><br>
+
+    <label>¿Por qué deseas adoptar a este gato?
+      <textarea name="mensaje" rows="4" cols="40"></textarea>
+    </label><br><br>
+
+    <button type="submit" class="boton">Enviar solicitud</button>
+    <button type="button" class="boton" onclick="mostrar('inicio')">Cancelar</button>
+  </form>
 </section>
 
   <footer>

@@ -40,3 +40,9 @@ function iniciarSesion() {
   alert("¡Has iniciado sesión correctamente!");
   mostrar("inicio");
 }
+
+function adoptar(nombreGato) {
+  document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+  document.getElementById('formulario-adopcion').style.display = 'block';
+  document.getElementById('nombre-gato-seleccionado').innerHTML = `<strong>Gato:</strong> ${nombreGato}`;
+}

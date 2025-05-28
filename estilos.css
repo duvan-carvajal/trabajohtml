@@ -647,3 +647,79 @@ section.active {
     margin: 20px auto;
   }
 }
+#formulario-adopcion {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#formulario-adopcion h2 {
+  margin-bottom: 25px;
+  font-size: 28px;
+  color: #333;
+}
+
+#formulario-adopcion label {
+  display: block;
+  margin-bottom: 20px;
+  text-align: left;
+  font-weight: bold;
+  color: #444;
+}
+
+#formulario-adopcion input[type="text"],
+#formulario-adopcion input[type="email"],
+#formulario-adopcion input[type="password"],
+#formulario-adopcion textarea,
+#formulario-adopcion select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  color: #AAA;
+  border: 1px solid #CCC;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+#formulario-adopcion input:focus,
+#formulario-adopcion textarea:focus,
+#formulario-adopcionselect:focus {
+  border-color: #2A9D8F;
+  outline: none;
+}
+
+#formulario-adopcion .boton {
+  width: 100%;
+  background-color: #81c784;
+  font-size: 18px;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  color: white;
+}
+
+#formulario-adopcion .boton:hover {
+  background-color: #66bb6a;
+}
+
+#formulario-adopcion a {
+  display: block;
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #2A9D8F;
+  text-decoration: none;
+}
+
+#formulario-adopcion a:hover {
+  text-decoration: underline;
+}
